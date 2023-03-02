@@ -10,14 +10,25 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-    let parisDateElement = parisElement.querySelector(".date");
-    let parisTimeElement = parisElement.querySelector(".time");
-    let parisTime = moment().tz("Europe/Paris");
+  let crestonElement = document.querySelector("#creston");
+  if (crestonElement) {
+    let crestonDateElement = crestonElement.querySelector(".date");
+    let crestonTimeElement = crestonElement.querySelector(".time");
+    let crestonTime = moment().tz("America/Creston");
 
-    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-    parisTimeElement.innerHTML = parisTime.format(
+    crestonDateElement.innerHTML = crestonTime.format("MMMM Do YYYY");
+    crestonTimeElement.innerHTML = crestonTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  let amsterdamElement = document.querySelector("#amsterdam");
+  if (amsterdamElement) {
+    let amsterdamDateElement = amsterdamElement.querySelector(".date");
+    let amsterdamTimeElement = amsterdamElement.querySelector(".time");
+    let amsterdamTime = moment().tz("Europe/Amsterdam");
+
+    amsterdamDateElement.innerHTML = amsterdamTime.format("MMMM Do YYYY");
+    amsterdamTimeElement.innerHTML = amsterdamTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
